@@ -1,0 +1,95 @@
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+  <title>BeRealSparepartsCompany</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <!-- Custom CSS file for additional styles -->
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg gray-bg" data-bs-theme="dark">
+    <div class="container-fluid">
+      <!-- Logo or Brand -->
+      <a class="navbar-brand" href="/">
+        <img src="{% static 'images/BeRealMotorsLogo.png' %}" alt="Logo" class="logo-img">
+        BeRealMotors SpareParts Company 
+      </a>
+        <!-- Dropdown as a Button -->
+        <div class="dropdown">
+          <button class="dropdown-button " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Account
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/login">Login</a>
+            <a class="dropdown-item" href="/admin">Admin</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- cards -->
+  <div class="k">
+    <div class="card border-primary mb-3">
+      <div class="card-header">WELCOME TO </div>
+      <div class="card-body">
+        <h1 class="card-title">BeRealMotors SpareParts Company!!</h1>
+        <p class="card-text">"Driving Dreams, Delivering Quality"</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="vanessa">
+    <div class="image-row">
+      <a href="/login">
+        <img src="{% static 'images/batteries.jpeg' %}" class="image" alt="picture1">
+      </a>
+      <a href="/login">
+        <img src="{% static 'images/engine1.jpg' %}" class="image" alt="picture2">
+      </a>
+      <a href="/login">
+        <img src="{% static 'images/tire2.jpeg' %}" class="image" alt="picture3">
+      </a>
+    </div>
+  </div>
+  
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer">
+      <p>"Rev up your vehicles with BeRealMotors Spare Parts - Where quality meets performance!"</p>
+      <div class="social-links">
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <div class="text-center mt-3">
+        &copy; Copyright <strong><span>
+            <script>document.write(new Date().getFullYear())</script> BeRealMotors Spare Parts Company
+          </span></strong>
+      </div>
+      <div class="credits">
+        Designed by TUSHABE TRINITY FRANCESCO
+      </div>
+    </div>
+  </footer>
+
+
+
+</body>
+</html>

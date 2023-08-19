@@ -1,0 +1,186 @@
+/* login.css */
+
+/* Navbar styling */
+body {
+    background: linear-gradient(45deg, #f2f2f2, #61677A);
+    font-family: 'Times New Roman', serif;
+    font-size: 28px;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+
+.navbar {
+    background-color: #394867;
+    padding: 20px 0;
+
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 28px;
+}
+
+.navbar-brand:hover {
+    color: gray;
+}
+
+.logo-img {
+    height: 80px;
+    border-radius: 50px;
+}
+
+/* Dropdown as a Button */
+.dropdown-button {
+    width: 150px;
+    height: 50px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    background-color: #394867;
+    border-radius: 15px;
+    color: white;
+    /* Adjust the border radius as needed */
+}
+
+/* Container for the login form */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    /* height: 80vh; */
+
+}
+
+/* 3D Card Styles */
+.card {
+
+    align-items: center;
+    width: 500px;
+    position: center;
+    perspective: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    margin-top: 40px;
+}
+
+.card:hover {
+    transform: rotateY(20deg);
+    /* Increase the rotation angle to make the 3D effect more visible */
+}
+
+.card-body {
+    width: 400px;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 20px;
+
+}
+
+h1.text-center {
+    text-align: center;
+    margin-left: 150px;
+}
+
+input[type="submit"] {
+    margin-top: 50px;
+    width: 50%;
+    margin-left: 90px;
+}
+
+/* Footer Styles */
+#footer {
+    margin-top: 60px;
+    background-color: transparent;
+    font-style: Times New Roman;
+    color: #394867;
+    text-align: center;
+
+}
+
+#footer .social-links a {
+    color: black;
+}
+
+#footer .credits {
+    font-size: 25px;
+    color: black;
+}
+
+/* Other general styles for your form and other elements can be added here */
+.k {
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* edits */
+#id_username {
+    border: 5px solid #394867;
+    height: 50px;
+    font-size: 30px;
+
+}
+
+#id_password {
+    border: 5px solid #394867;
+    height: 50px;
+    font-size: 30px;
+}
+
+.asteriskField {
+    color: red;
+
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Times New Roman', serif;
+    color: #fff;
+    background: linear-gradient(to bottom, #394867, #293549);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#form {
+    padding-top: 50px;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 58px;
+    color: #394867;
+    font-family: 'Times New Roman', serif;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-shadow: 1px 1px 0 #8AB6D6, 2px 2px 0 #556D88;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: center;
+
+}
+
+.icon {
+    font-size: 45px;
+}

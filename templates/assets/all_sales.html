@@ -1,0 +1,62 @@
+{% extends 'assets/base.html'%} {% block content%}
+<br></br>
+
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h1 class="text-center">TOTAL SALES MADE</h1><br>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Total Amount Paid</th>
+            <th scope="col">Total Pending Payments</th>
+            <th scope="col">Total Sales</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>UGX{{total}}</td>
+            <td>UGX{{change}}</td>
+            <td>UGX{{gross}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<br></br>
+
+<div class="f">
+  <div class="card">
+    <div class="card-body">
+      <table class="table">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Customer name</th>
+              <th scope="col">Part Bought</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Unit Price(UGX)</th>
+              <th scope="col">Total Cost</th>
+              <th scope="col">Amount Paid</th>
+              <th scope="col">Pending Payment</th>
+            </tr>
+          </thead>
+          {% for sale in sales %}
+          <tbody>
+            <tr>
+              <td>{{sale.customers_name | title}}</td>
+              <td>{{sale.item | title}}</td>
+              <td>{{sale.quantity}}</td>
+              <td>UGX{{sale.unit_price}}</td>
+              <td>UGX{{sale.get_total}}</td>
+              <td>UGX{{sale.amount_received}}</td>
+              <td>UGX{{sale.get_change}}</td>
+            </tr>
+          </tbody>
+          {% endfor %}
+        </table>
+    </div>
+  </div>
+</div>
+{% endblock%}

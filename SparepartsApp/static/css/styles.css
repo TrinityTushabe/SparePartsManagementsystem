@@ -1,0 +1,343 @@
+/* Custom styles for the Navbar */
+
+/* Logo or Brand Image */
+.logo-img {
+  height: 80px;
+  /* Adjust the height of the logo image as needed */
+  margin-right: 10px;
+  /* Add some spacing between the logo image and the text */
+  border-radius: 50px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.navbar {
+  margin-bottom: 10px;
+  background-color: #394867;
+}
+.navbar-brand {
+  color: white;
+  font-size: 28px;
+}
+.navbar-brand:hover{
+  color: gray;
+}
+
+/* .gray-bg {
+  background-color: #394867;
+  font-size: 25px;
+  font-style: Times New Roman;
+  
+} */
+
+/* Dropdown as a Button */
+.dropdown-button {
+  width: 150px;
+  height: 50px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  background-color: #394867;
+  border-radius: 15px;
+  color: white;
+  
+}
+
+/* Background Image */
+body {
+  background: linear-gradient(45deg, #f2f2f2, #61677A);
+  font-family: 'Times New Roman', serif;
+  font-size: 28px;
+  height: 100vh;
+  overflow: hidden;
+
+}
+
+/* Footer Styles */
+#footer {
+  background-color: transparent;
+  font-style: Times New Roman;
+  color: #394867;
+  padding: 25px;
+  text-align: center;
+  /* Center align footer content */
+}
+
+#footer .social-links a {
+  color: black;
+}
+
+#footer .credits {
+  font-size: 28px;
+  color: black;
+}
+
+
+.card-text {
+  text-align: center;
+}
+
+.card-header {
+  font-style: Times New Romans;
+  color: #394867;
+  font-size: 25px;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: black;
+}
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #000;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+/* --------------------------------------------------------------
+  contact 
+-------------------------------------------------------------- */
+
+
+.contact .info i {
+  font-size: 20px;
+  color: black;
+  float: left;
+  width: 44px;
+  height: 44px;
+  /* background: #e7f5fb; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.contact .info p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: black;
+}
+
+.contact .info .email p {
+  padding-top: 5px;
+}
+
+.contact .info .social-links {
+  padding-left: 60px;
+}
+
+.contact .info .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #333;
+  color: black;
+  line-height: 1;
+  padding: 8px 0;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+
+.contact .info .social-links a:hover {
+  background: #000;
+  color: black;
+}
+
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+  background: #333;
+  color: #ccbbbb;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #333;
+}
+
+/* Center the card */
+/* .k {
+
+  
+  margin-right: 20%;
+  margin-left: 20%;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+} */
+
+.k {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 80vh; */
+  perspective: 1000px;
+  /* Set the perspective for the 3D effect */
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.card {
+  position: relative;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  margin-left: 100px;
+  margin-right: 100px;
+  /* margin-bottom: 20px; */
+}
+
+.k:hover .card {
+  transform: rotateY(20deg);
+  /* Change the rotation angle to adjust the 3D effect */
+}
+
+.card-body {
+  padding: 20px;
+}
+
+h1.card-title {
+  text-align: center;
+}
+
+.card-text {
+  text-align: center;
+}
+
+
+
+.card-body {
+  text-align: center;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  /* Add space between images */
+}
+
+.image-row a {
+  flex: 1;
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.image-row a:hover {
+  transform: translateY(-5px) scale(1.05);
+  /* Apply 3D effect on hover */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  /* Add shadow on hover */
+}
+
+.vanessa{
+  margin-left: 20px;
+  margin-right: 20px;
+}

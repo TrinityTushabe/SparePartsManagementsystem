@@ -1,0 +1,113 @@
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+    <title>BeReal Motor Spareparts Company</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <!-- Raleway font -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+    <!-- Montserrat font -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'images/BeRealMotorsLogo.png' %}" alt="Logo" class="logo-img">
+        </a>
+        <a class="nav-link" href="{% url 'home' %}">
+            <h1 class="navbar-brand" style="font-size: 30px" onmouseover="this.style.color='gray'"
+                onmouseout="this.style.color='white'">BeRealMotor Spareparts Company</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item {% if request.path == '/' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'home' %}" style="font-size: 25px; color:white;"
+                        onmouseover="this.style.color='gray'" onmouseout="this.style.color='white'">HOME</a>
+                </li>
+                <li class="nav-item {% if request.path == '/receipt/' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'receipt' %}" style="font-size: 25px; color:white;"
+                        onmouseover="this.style.color='gray'" onmouseout="this.style.color='white'">RECEIPTS</a>
+                </li>
+                <li class="nav-item {% if request.path == '/all_sales/' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'all_sales' %}" style="font-size: 25px; color:white;"
+                        onmouseover="this.style.color='gray'" onmouseout="this.style.color='white'">ALL SALES</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {% if user.userprofile.profile_picture %}
+                        <img src="{{ user.userprofile.profile_picture.url }}" alt="Profile Picture"
+                            style="width: 30px; height: 30px; border-radius: 50%;">
+                        {% else %}
+                        <img src="{% static 'images/default_avatar.png' %}" alt="Default Avatar"
+                            style="width: 30px; height: 30px; border-radius: 50%;">
+                        {% endif %}
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'user_profile' %}">Profile</a>
+                        <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                    </div>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Login</a>
+                </li>
+
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer">
+          <p>"Rev up your vehicles with BeRealMotors Spare Parts - Where quality meets performance!"</p>
+          <div class="social-links">
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <div class="text-center mt-3">
+            &copy; Copyright <strong><span>
+                <script>document.write(new Date().getFullYear())</script> BeRealMotors Spare Parts Company
+              </span></strong>
+          </div>
+          <div class="credits">
+            Designed by TUSHABE TRINITY FRANCESCO
+          </div>
+        </div>
+      </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

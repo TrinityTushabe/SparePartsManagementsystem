@@ -1,0 +1,37 @@
+{% extends 'assets/base.html'%} {% block content%}
+<br /><br>
+<div class="container">
+  <div class="card custom-card">
+    <div class="card-header text-center">
+      <h1>ALL RECEIPTS</h1>
+    </div>
+  </div>
+    <br>
+  {% for sale in sales %}
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-title">Customer: {{sale.customers_name | title}}</h3>
+      <h4 class="card-text">Contact: {{sale.phone_number}}</h4>
+      <h4 class="card-text">Part : {{sale.item}}</h4>
+
+      <h4 class="card-text">Amount Paid:  UGX{{ sale.amount_received }}</h4>
+      <h4 class="card-text">Quantity: {{sale.quantity }}</h4>
+      <h2>Total Price :  UGX{{ sale.get_total }}</h2>
+      <div style="flex: 1">
+        <h4 class="card-text">Pending Payment:  UGX{{ sale.get_change }}</h4>
+        <a href="{% url 'receipt_detail' sale.id %}">
+          <input
+            type="submit"
+            value="Final Receipt"
+            class="btn "
+            type="button"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+  <br />
+  {% endfor %}
+</div>
+{% endblock %} 
+ 

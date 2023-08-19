@@ -1,0 +1,222 @@
+/* Your existing CSS styles */
+
+/* Navbar styling */
+body {
+    position: relative;
+    overflow-x: hidden;
+    background: linear-gradient(45deg, #f2f2f2, #61677A);
+    width: 100% !important;
+    height: 100vh;
+    display: table;
+    position: relative;
+    background-position: center;
+    background-attachment: scroll;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+}
+
+body {
+    font-family: 'Times New Roman';
+    color: black;
+    font-size: 30px;
+}
+
+form {
+    width: 40%;
+    margin: 0 auto;
+}
+
+#vane {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #394867;
+    padding: 20px 0;
+
+}
+
+.navbar-brand,
+.navbar-links a {
+
+    color: white;
+    font-size: 24px;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    margin-left: 925px;
+}
+
+
+@media(max-width: 767px) {
+    form {
+        width: 90%;
+    }
+}
+
+.logo-img {
+    height: 60px;
+    border-radius: 50px;
+}
+
+/* Footer Styles */
+#footer {
+    margin-top: 60px;
+    background-color: transparent;
+    font-style: Times New Roman;
+    color: #394867;
+    text-align: center;
+
+}
+
+#footer .social-links a {
+    color: black;
+}
+
+#footer .credits {
+    font-size: 25px;
+    color: black;
+    text-emphasis-color: black;
+}
+
+
+.w {
+    width: 80%;
+    margin-left: 19%;
+    padding-right: 20%;
+}
+
+.N {
+    width: 100%;
+
+    padding-left: 8%;
+    padding-right: 11.5%;
+    align-items: center;
+
+}
+
+
+
+.custom-transparent-card {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    justify-content: center;
+    width: 100%;
+}
+
+.custom-card .card-body {
+
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+.custom-card {
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+.btn {
+    background-color: #394867;
+    color: white;
+}
+
+/* Additional styling for the hover state to maintain contrast */
+.btn:hover {
+    background-color: #212A3E;
+    /* Darken the background color slightly on hover */
+    color: white;
+}
+
+.t {
+    width: 100%;
+}
+
+
+.table>thead {
+    vertical-align: bottom;
+    background-color: #394867;
+    color: white;
+    font-size: 30px;
+}
+
+.table>tbody {
+    vertical-align: inherit;
+    font-size: 28px;
+    justify-content: center;
+}
+
+
+tr:hover {
+    background-color: #394867;
+    color: white;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #394867;
+}
+
+.table th,
+.table td {
+    border: 1px solid #394867;
+    /* Add borders to table cells */
+    padding: 8px;
+    text-align: left;
+}
+
+.f {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#id_part_name {
+    border: 2px solid #394867;
+}
+
+.asteriskField {
+    color: red;
+
+}
+
+#id_customers_name {
+    font-size: 28px;
+}
+
+#id_phone_number {
+    font-size: 28px;
+}
+
+#id_quantity {
+    font-size: 28px;
+}
+
+#id_branch_name {
+    font-size: 28px;
+}
+
+#id_date {
+    font-size: 28px;
+}
+
+#id_amount_received {
+    font-size: 28px;
+}

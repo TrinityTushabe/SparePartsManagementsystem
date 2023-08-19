@@ -1,0 +1,65 @@
+{% extends 'assets/base.html' %} {% block content %}
+<br></br>
+
+
+  <div class="w">
+    <!-- Combined Card for "ITEMS IN STOCK" heading and form -->
+    <div class="card border-secondary mb-3 custom-card custom-transparent-card">
+      <div class="card-header">
+        <h1 class="text-center">SPAREPARTS IN STOCK </h1>
+      </div>
+      <div class="card-body">
+        <div class="container">
+          <form action="" method="GET" id="vane">
+            {{product_filters.form}}
+            <input type="submit" value="Search Parts" class="btn btn-secondary btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+
+
+  <div class="N">
+    <div class="card border-seccondary mb-3 custom-card custom-transparent-card ms-4 me-4 mb-4">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Part Name</th>
+                <th scope="col">Part Number</th>
+                <th scope="col">Orgin</th>
+                <th scope="col">Branch</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Unit Price(UGX)</th>
+                <th scope="col">Detail</th>
+              </tr>
+            </thead>
+            {% for product in products %}
+            <tbody>
+              <tr>
+                <td>{{product.Category_name}}</td>
+                <td>{{product.part_name}}</td>
+                <td>{{product.id}}</td>
+                <td>{{product.country_of_orgin}}</td>
+                <td>{{product.branch_name}}</td>
+                <td>{{product.total_quantity}}</td>
+                <td>UGX{{product.unit_price}}</td>
+                <!-- below in href we're handling the buy item link(button) and it's handled by product_view  -->
+                <td><a href="{% url 'product_detail' product.id  %}"><input type="submit" value="SELL ITEM"
+                      class="btn btn-secondary btn" type="button" /></a></td>
+              </tr>
+            </tbody>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'assets/base.html'%} {% block content%}
+<br />
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="text-center">BeRealMotors SpareParts Company </h2>
+          <h1 class="text-center">ORDER SUMMARY</h1>
+          <p class="lead text-center">********************************************</p>
+          <h2 class="text-center">Customer Name: {{ receipt.customers_name | title }}</h2>
+          <p class="lead text-center">Date: {{ receipt.date }}</p>
+          <p class="lead text-center">Branch: {{ receipt.branch_name }}</p>
+          <p class="lead text-center">Contact: {{ receipt.phone_number }}</p>
+          <p class="lead text-center">--------------------------------------------</p>
+        </div>
+        <div class="card-block">
+          <div class="table-responsive">
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <td><strong>Part Name</strong></td>
+                  <td class="text-xs-center"><strong>Part Quantity</strong></td>
+                  <td class="text-xs-right"><strong>Total Bill(Ugx)</strong></td>
+                  <td class="text-xs-right"><strong>Amount Paid(Ugx)</strong></td>
+                  <td class="text-xs-right">
+                    <strong>Pending Payment(UgX)</strong>
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{receipt.item| title}}</td>
+                  <td class="text-xs-center">{{receipt.quantity }}</td>
+                  <td class="text-xs-center">Ug{{receipt.get_total | title}}</td>
+                  <td class="text-xs-right">Ugx{{ receipt.amount_received }}</td>
+                  <td class="text-xs-right">Ugx{{ receipt.get_change }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h1 class="text-center" style="color: #394867; font-size:30px;">Thank you for your purchase!</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

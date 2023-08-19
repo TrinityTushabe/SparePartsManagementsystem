@@ -1,0 +1,51 @@
+{% extends 'assets/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="container text-center">
+        <h1>Welcome, {{ user.username|title }}!</h1>
+        
+        <div class="card mt-4 mb-4" style="margin: 0 auto; width: 80%;">
+            <div class="card-header">
+                <h2>Your Profile</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        {% if user_profile.profile_picture %}
+                            <img src="{{ user_profile.profile_picture.url }}" alt="{{ user.username }}'s Profile Picture" class="img-fluid rounded-circle profile-picture">
+                        {% else %}
+                        <img src="{% static 'images/default_avatar.png' %}" alt="Default Profile Picture" class="img-fluid rounded-circle profile-picture">
+                            <p>No profile picture uploaded yet.</p>
+                        {% endif %}
+                    </div>
+                    <div class="col-md-8">
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-primary">Update Profile Picture</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        h1{
+            color: white;
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        #id_profile_picture {
+            margin-left: 50px;
+            height: 60px;
+           
+        }
+    </style>
+{% endblock %}
