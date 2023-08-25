@@ -14,7 +14,7 @@ class SaleForm(ModelForm):
     class Meta:
         model = Sale  
         fields = [
-            'customers_name','phone_number', 'quantity',  'branch_name', 'date','amount_received',
+            'customers_name','phone_number', 'quantity',  'branch_name', 'amount_received',
         ]      
         
 class ProfilePictureForm(ModelForm):

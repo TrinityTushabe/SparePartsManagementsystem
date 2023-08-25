@@ -40,6 +40,7 @@
               <th scope="col">Total Cost</th>
               <th scope="col">Amount Paid</th>
               <th scope="col">Pending Payment</th>
+              <th class="col">Date</th>
             </tr>
           </thead>
           {% for sale in sales %}
@@ -52,6 +53,7 @@
               <td>UGX{{sale.get_total}}</td>
               <td>UGX{{sale.amount_received}}</td>
               <td>UGX{{sale.get_change}}</td>
+              <td>{{sale.date}}</td>
             </tr>
           </tbody>
           {% endfor %}

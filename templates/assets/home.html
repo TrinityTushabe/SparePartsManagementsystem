@@ -11,7 +11,7 @@
       <div class="card-body">
         <div class="container">
           <form action="" method="GET" id="vane">
-            {{product_filters.form}}
+            {{product_filters.form|title}}
             <input type="submit" value="Search Parts" class="btn btn-secondary btn" />
           </form>
         </div>
@@ -45,13 +45,13 @@
               <tr>
                 <td>{{product.Category_name}}</td>
                 <td>{{product.part_name}}</td>
-                <td>{{product.id}}</td>
+                <td>BRMS-0{{product.id}}</td>
                 <td>{{product.country_of_orgin}}</td>
                 <td>{{product.branch_name}}</td>
                 <td>{{product.total_quantity}}</td>
                 <td>UGX{{product.unit_price}}</td>
                 <!-- below in href we're handling the buy item link(button) and it's handled by product_view  -->
-                <td><a href="{% url 'product_detail' product.id  %}"><input type="submit" value="SELL ITEM"
+                <td><a href="{% url 'product_detail' product.id  %}"><input type="submit" value="SELL PART"
                       class="btn btn-secondary btn" type="button" /></a></td>
               </tr>
             </tbody>

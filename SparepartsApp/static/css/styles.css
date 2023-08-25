@@ -138,100 +138,7 @@ section {
 
 
 
-/* --------------------------------------------------------------
-  contact 
--------------------------------------------------------------- */
 
-
-.contact .info i {
-  font-size: 20px;
-  color: black;
-  float: left;
-  width: 44px;
-  height: 44px;
-  /* background: #e7f5fb; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-}
-
-.contact .info h4 {
-  padding: 0 0 0 60px;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: black;
-}
-
-.contact .info p {
-  padding: 0 0 10px 60px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  color: black;
-}
-
-.contact .info .email p {
-  padding-top: 5px;
-}
-
-.contact .info .social-links {
-  padding-left: 60px;
-}
-
-.contact .info .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #333;
-  color: black;
-  line-height: 1;
-  padding: 8px 0;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-  margin-right: 10px;
-}
-
-.contact .info .social-links a:hover {
-  background: #000;
-  color: black;
-}
-
-.contact .info .email:hover i,
-.contact .info .address:hover i,
-.contact .info .phone:hover i {
-  background: #333;
-  color: #ccbbbb;
-}
-
-/* Form Styles */
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  font-size: 18px;
-  font-weight: 500;
-  color: black;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  color: white;
-}
-
-.form-group textarea {
-  resize: vertical;
-}
 
 button[type="submit"] {
   display: inline-block;
@@ -250,24 +157,11 @@ button[type="submit"]:hover {
   background-color: #333;
 }
 
-/* Center the card */
-/* .k {
-
-  
-  margin-right: 20%;
-  margin-left: 20%;
-  justify-content: center;
-  align-items: center;
-
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-
-} */
 
 .k {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 80vh; */
   perspective: 1000px;
   /* Set the perspective for the 3D effect */
   margin-bottom: 10px;
